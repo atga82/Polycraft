@@ -1,65 +1,42 @@
 # Polycraft
 
-Polycraft es un portal de cursos en línea desarrollado como un proyecto universitario para Programación Web Capa Intermedia de la UANL.
+**Polycraft** es un portal de cursos en línea desarrollado para la materia de Programación Web Capa Intermedia de la UANL.
 
-El sistema está diseñado para tres tipos de usuarios:
-
-- Estudiantes: inscripción, compra de cursos, progreso y certificados.
-- Instructores: creación de cursos, materiales y reportes de ventas.
-- Administradores: gestión de usuarios, categorías y reportes.
+Permite a los **estudiantes** explorar, comprar y completar cursos; a los **instructores** crear cursos, niveles y materiales; y a los **administradores** gestionar usuarios, categorías, comentarios y reportes.
 
 ## Tecnologías
 
-- PHP, HTML, CSS y JavaScript
-- MySQL
-- API REST propia desarrollada con arquitectura MVC
-- Mercado Pago Sandbox para simular compras
+- PHP (POO y arquitectura MVC), HTML, CSS y JavaScript con `fetch`.
+- MySQL para la información de usuarios, cursos, inscripciones y pagos.
+- API REST propia y Mercado Pago **en entorno de prueba** para simular compras.
 
-## Instalación
+## Instalación local
 
-### Prototipo publicado en GitHub
+1. Instala **XAMPP** (Apache y PHP 8+) y **MySQL**. Puedes administrar MySQL con Workbench; no necesitas arrancar otro servidor MySQL desde XAMPP si ya está activo.
+2. Dentro de `C:\xampp\htdocs`, clona el repositorio:
 
-1. Instala XAMPP.
-2. Clona el repositorio dentro de `C:\xampp\htdocs`:
+   ```powershell
+   git clone https://github.com/atga82/Polycraft.git Polycraft-main
+   ```
 
-   git clone https://github.com/atga82/Polycraft.git
+3. Inicia Apache y comprueba que MySQL esté funcionando.
+4. Si es una instalación nueva, importa `database/portal_cursos.sql` desde MySQL Workbench. **Haz respaldo antes de importar sobre una base existente**.
+5. Copia `config/local.php.example` como `config/local.php` y configura las credenciales locales de MySQL. No compartas ese archivo.
+6. Abre [http://localhost/Polycraft-main/](http://localhost/Polycraft-main/) y comprueba la API en [http://localhost/Polycraft-main/api/health](http://localhost/Polycraft-main/api/health).
+7. Para probar las operaciones REST, importa `postman/Polycraft-Avance3.postman_collection.json` en Postman.
 
-3. Inicia Apache desde XAMPP.
-4. Abre en el navegador:
+## Pagos de demostración
 
-   http://localhost/Polycraft/Menu.php
+El portal contempla dos modalidades académicas: **Mercado Pago Sandbox**, que requiere credenciales y tarjetas de prueba configuradas solo en el servidor, y **transferencia simulada**, que no mueve dinero. La integración externa debe permanecer deshabilitada cuando no se esté haciendo una prueba supervisada.
 
-Esta versión contiene las pantallas iniciales del proyecto.
+## Documentación
 
-### Versión completa con API y MySQL
-
-Para ejecutar la versión completa de Polycraft:
-
-1. Coloca la carpeta `Polycraft-main` en `C:\xampp\htdocs`.
-2. Inicia Apache y asegúrate de que MySQL esté funcionando.
-3. Importa `database/portal_cursos.sql` desde MySQL Workbench
-   si necesitas crear una base de datos nueva.
-4. Configura la conexión a MySQL en `config/local.php`.
-5. Abre:
-
-   http://localhost/Polycraft-main/
-
-6. Comprueba la API en:
-
-   http://localhost/Polycraft-main/api/health
-
-7. Importa la colección de Postman incluida en el proyecto
-   para probar los endpoints.
-
-Nota: La versión completa todavía no está publicada en este
-repositorio. Las compras con Mercado Pago se realizan únicamente
-en un entorno de prueba, sin dinero real.
+- [Documentación de endpoints de la API](docs/Polycraft_Contrato_API_Final.md).
+- [Manual de implementación y operación](docs/Polycraft_Manual_Implementacion_y_Operacion.docx).
 
 ## Integrantes
 
 - Miguel Ángel Salazar García
 - Ángel Tadeo García Almanza
 
-Universidad Autónoma de Nuevo León
-Facultad de Ciencias Físico Matemáticas
-Grupo 051 — Agosto-Diciembre 2026
+**Universidad Autónoma de Nuevo León · Facultad de Ciencias Físico Matemáticas · Grupo 051 · Agosto–diciembre de 2026.**

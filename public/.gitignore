@@ -1,0 +1,6 @@
+uploads/avatars/*
+!uploads/avatars/default.png
+!uploads/avatars/.gitkeep
+# Los videos, imágenes y PDFs que suben los usuarios no se versionan.
+uploads/courses/*
+!uploads/courses/.gitkeep

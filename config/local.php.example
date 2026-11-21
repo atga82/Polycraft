@@ -1,0 +1,20 @@
+<?php
+/**
+ * Copia este archivo como config/local.php y agrega credenciales locales.
+ * config/local.php esta excluido de Git; NO subas tokens reales al repositorio.
+ */
+return [
+    'DB_HOST' => '127.0.0.1',
+    'DB_PORT' => '3306',
+    'DB_NAME' => 'portal_cursos',
+    'DB_USER' => 'root',
+    'DB_PASSWORD' => '',
+
+    // Pega aquí tu Access Token DE PRUEBA del panel de Mercado Pago solo en config/local.php.
+    // En este ejemplo queda vacío para evitar incluir credenciales dentro del proyecto.
+    'MP_ACCESS_TOKEN' => '',
+
+    // Solo cambiar a '1' cuando el panel de Mercado Pago indique ENTORNO PRUEBA.
+    // Tanto los tokens de prueba como los productivos pueden comenzar con APP_USR.
+    'MP_HABILITAR_CHECKOUT_PRUEBA' => '0',
+];

@@ -1,0 +1,8 @@
+# Conserva los directorios vacíos; no versiona archivos de usuarios ni recursos subidos.
+*/
+!.gitignore
+!avatars/
+!courses/
+!avatars/default.png
+!avatars/.gitkeep
+!courses/.gitkeep

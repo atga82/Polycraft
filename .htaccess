@@ -1,0 +1,6 @@
+# Permite abrir el proyecto en http://localhost/Polycraft-main/ sin escribir /public
+RewriteEngine On
+
+# La condicion evita que la regla se vuelva a aplicar sobre la URL ya reescrita (bucle)
+RewriteCond %{REQUEST_URI} !/public/
+RewriteRule ^(.*)$ public/$1 [L]

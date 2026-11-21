@@ -1,0 +1,10 @@
+/config/local.php
+/.env
+/.env.*
+!/config/local.php.example
+/logs/
+
+# Copias locales y colecciones que pueden contener cuentas de prueba
+/config/Polycraft-Avance2-corregido.zip
+/postman/Polycraft-Avance2.postman_collection.json
+/postman/Polycraft - API propia - Avance 3 (final).postman_collection.json
